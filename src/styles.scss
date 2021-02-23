@@ -2,3 +2,19 @@
 body {
     margin: 0;
 }
+
+@font-face {
+    font-family: papyrus;
+    src: url(assets/fonts/papyrus/PAPYRUS.TTF) format("ttf");
+  }
+
+  
+@font-face {
+    font-family: perpetua;
+    src: url(assets/fonts/Perpetua-Titling-MT/Perpetua-Titling-MT.TTF) format("ttf");
+  }
+
+@font-face {
+    font-family: myriad;
+    src: url(assets/fonts/Myriad-Pro/Myriad-Pro.ttf) format("ttf");
+  }
