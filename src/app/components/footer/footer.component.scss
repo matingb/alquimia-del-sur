@@ -1,0 +1,48 @@
+footer.contacto {
+    display: flex;
+    
+    .item-contacto {
+        
+        padding: 80px 50px 50px;
+        text-align: center;
+        
+        .imagen {
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        .nombre {
+            font-size: 26px;
+            color: #ce402c;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .descripcion {
+            font-size: 20px;
+            color: #000;
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    footer.contacto{
+        display: block;
+
+        .item-contacto {
+            padding: 25px 50px;
+        }
+    }
+}
+
+.derechos-reservados {
+    background-color: #252161;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+
+    .fa-linkedin-in {
+        padding-right: 10px;
+    }
+}
+

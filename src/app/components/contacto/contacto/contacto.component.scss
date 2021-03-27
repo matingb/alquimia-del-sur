@@ -1,0 +1,42 @@
+.contenedor {
+    padding: 40px 15% 60px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(37,33,97,255);
+
+    .titulo {
+        font-size: 65px;
+    }
+
+    input[type=text], textarea {
+        width: 70%;
+        height: 60px;
+        background-color: rgba(37,33,97,255);
+        color: #fff;
+        border: solid 2px #fff;
+        margin: 10px;
+        font-size: 25px;
+    }
+    .mensaje {
+        height: 200px;
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: #fff;
+    }
+    
+
+    input[type=submit] {
+        width: 70%;
+        height: 60px;
+        border: 0;
+        color: rgba(37,33,97,255);
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 767px){
+    .contenedor{
+        padding: 0;
+    }
+}

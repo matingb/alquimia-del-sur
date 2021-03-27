@@ -1,0 +1,13 @@
+<div class="contenedor">
+    <div class="titulo">CONTACTANOS</div>
+    <form #sendEmail = "ngForm" (ngSubmit) = "onClickSubmit(sendEmail.value)" >
+        <input type="text" name = "nombre" placeholder = "NOMBRE" ngModel>
+        <input type="text" name="apellido" placeholder="APELLIDO" ngModel>
+        <input type="text" name="asunto" placeholder="ASUNTO" ngModel>
+        <input type="text" name="email" placeholder="MAIL" ngModel>
+
+        <textarea type="text" name="mensaje" class="mensaje" placeholder="MENSAJE" ngModel></textarea>
+
+        <input type = "submit" value = "ENVIAR MENSAJE">
+     </form>
+</div>
