@@ -23,7 +23,7 @@ export class ContactoComponent implements OnInit {
       mensaje: data.mensaje
     };
     console.dir(body);
-    this.httpClient.post<any>('http://localhost:5000/hola', body)
+    this.httpClient.post<any>('https://garzangb.herokuapp.com/sendEmail', body)
     .subscribe(data => {
     });
   }

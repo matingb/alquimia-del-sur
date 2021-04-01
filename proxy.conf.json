@@ -1,6 +1,0 @@
-{
-    "*":{
-        "secure": false,
-        "logLevel": "debug"
-    }
-}
