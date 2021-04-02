@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        <i class="fas fa-bars" (click)="toggleNav()"></i>
+        <div [ngClass]="{'hideNav':hideNav === true}">
+            <li class="nav-item" [routerLink]="['/']" fragment="inicio">INICIO</li>
+            <li class="nav-item" [routerLink]="['/']" fragment="servicios">SERVICIOS</li>
+            <li class="nav-item" [routerLink]="['/']" fragment="equipos">EQUIPOS</li>
+            <li class="nav-item" [routerLink]="['/']" fragment="productos">PRODUCTOS</li>
+            <li class="nav-item" [routerLink]="['/']" fragment="contacto">CONTACTO</li>
+        </div>
+    </ul>
+</nav>

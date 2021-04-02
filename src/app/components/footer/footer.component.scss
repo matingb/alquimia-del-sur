@@ -35,11 +35,20 @@ footer.contacto {
 }
 
 .derechos-reservados {
-    background-color: #252161;
+    background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    font-size: 22px;
+    padding: 20px 0;
+    font-size: 25px;
+
+    div {
+        margin-bottom: 10px;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
 
     .fa-linkedin-in {
         padding-right: 10px;

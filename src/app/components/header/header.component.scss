@@ -1,25 +1,85 @@
-nav {
-    color: rgba(37,33,97,255);
+.background {
+    background-image: url("../../../assets/imagenes/fondo-campo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1000px;
+}
+
+.titulo {
+    height: 100%;
+    width: 100%;
+    text-align: center;
     display: flex;
-    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-family: papyrus;
+
+    h1 {
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+        
+    .principal {
+        font-size: 80px;
+    }   
+
+    .secundario {
+        font-size: 50px;
+    }
 
     img {
         padding: 5px 0 0;
         height: 115px;
-        width: 115px;
+        width: 140px;
+        opacity: 0.6;
+        margin-bottom: 15px;
     }
 
-    ul {
+    .redes {
+        padding-top: 15px;
         width: 100%;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        list-style: none;
+        text-align: center;
+        
+        .icon {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 20px 5px 20px;
+            font-size: 50px;
+            border-radius: 100%;
+        }
+    }
 
-        .nav-item {
-            font-size: 20px;
-            padding-right: 3%;
+    .eslogan {
+        padding: 15px;
+        text-align: center;
+        font-size: 25px;
+        font-family: perpetua;
+        color: #fff;
+    }
+
+}
+
+@media (max-width: 767px){
+   
+    .titulo {
+        .principal {
+            font-size: 55px;
+        }
+    
+        .secundario {
+            font-size: 35px;
+        }
+    
+        .redes {
+            .icon {
+                font-size: 45px;
+            }
+        }
+    
+        .eslogan {
+            font-size: 25px;
         }
     }
 }

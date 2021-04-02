@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-contacto',
@@ -22,7 +21,6 @@ export class ContactoComponent implements OnInit {
       email: data.email,
       mensaje: data.mensaje
     };
-    console.dir(body);
     this.httpClient.post<any>('https://garzangb.herokuapp.com/sendEmail', body)
     .subscribe(data => {
     });

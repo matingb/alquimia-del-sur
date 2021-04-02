@@ -1,20 +1,21 @@
 .contenedor {
-    padding: 40px 15% 60px;
+    padding: 40px 25% 60px;
     text-align: center;
     color: #fff;
     background-color: rgba(37,33,97,255);
 
     .titulo {
         font-size: 65px;
+        margin-bottom: 10px;
     }
 
     input[type=text], textarea {
         width: 70%;
-        height: 60px;
+        height: 70px;
         background-color: rgba(37,33,97,255);
         color: #fff;
         border: solid 2px #fff;
-        margin: 10px;
+        margin: 15px;
         font-size: 25px;
     }
     .mensaje {
@@ -24,7 +25,6 @@
     input::placeholder, textarea::placeholder {
         color: #fff;
     }
-    
 
     input[type=submit] {
         width: 70%;
@@ -35,8 +35,8 @@
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: 1000px){
     .contenedor{
-        padding: 0;
+        padding: 40px 0;
     }
 }
