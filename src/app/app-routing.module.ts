@@ -8,7 +8,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    onSameUrlNavigation: "ignore",
+    onSameUrlNavigation: "reload",
     anchorScrolling:'enabled',
     scrollPositionRestoration: 'enabled',
     scrollOffset: [0, 130]

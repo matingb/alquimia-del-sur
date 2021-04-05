@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contacto',
@@ -8,21 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
 
-  onClickSubmit(data) {
-    const body = { 
-      nombre: data.nombre,
-      apellido: data.apellido,
-      asunto: data.asunto, 
-      email: data.email,
-      mensaje: data.mensaje
-    };
-    this.httpClient.post<any>('https://garzangb.herokuapp.com/sendEmail', body)
-    .subscribe(data => {
-    });
+  onClickSubmit(ngForm:NgForm) {
+    console.dir(ngForm);
+    if (ngForm.valid == true) {
+      const body = { 
+        nombre: ngForm.value.nombre,
+        apellido: ngForm.value.apellido,
+        asunto: ngForm.value.asunto, 
+        email: ngForm.value.email,
+        mensaje: ngForm.value.mensaje
+      };
+      this.httpClient.post<any>('https://garzangb.herokuapp.com/sendEmail', body)
+      .subscribe(data => {
+        this.toastr.success(data.message, 'Mail enviado correctamente');
+        window.alert(data.message);
+      });
+    }
+    else {
+      this.toastr.error('Los campos no fueron completados correctamente', 'Error al enviar el mail');
+    }
   }
 }

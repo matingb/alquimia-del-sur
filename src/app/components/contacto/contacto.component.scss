@@ -1,42 +1,80 @@
 .contenedor {
-    padding: 40px 25% 60px;
+    padding: 40px 100px 60px;
     text-align: center;
     color: #fff;
     background-color: rgba(37,33,97,255);
+    text-align: -webkit-center;
 
     .titulo {
         font-size: 65px;
         margin-bottom: 10px;
     }
 
-    input[type=text], textarea {
-        width: 70%;
-        height: 70px;
-        background-color: rgba(37,33,97,255);
-        color: #fff;
-        border: solid 2px #fff;
-        margin: 15px;
-        font-size: 25px;
-    }
-    .mensaje {
-        height: 200px;
-    }
+    form {
+        max-width: 600px;
+        input, textarea{
+            width: 100%;
+            font-size: 25px;
+        }
+    
+        input[type=text], textarea {
+            height: 80px;
+            background-color: rgba(37,33,97,255);
+            color: #fff;
+            border: solid 3px #fff;
+            margin: 15px 0;
+        }
+    
+        input.ng-invalid {
+            border: solid 2px red;
+        }
 
-    input::placeholder, textarea::placeholder {
-        color: #fff;
-    }
+        input.ng-untouched {
+            border-color: #fff;
+        }
 
-    input[type=submit] {
-        width: 70%;
-        height: 60px;
-        border: 0;
-        color: rgba(37,33,97,255);
-        font-size: 25px;
+        .submit-container {
+            text-align: right;
+            input[type=submit] {
+                width: 40%;
+                height: 70px;
+                border: solid 1px #fff;
+                color: #fff;
+                border-radius: 60px;
+                background-color: rgba(37,33,97,255);
+                transition: all 0.3s;
+            }
+            input[type=submit]:hover {
+                background-color: #fff;
+                color: rgba(37,33,97,255);
+            }
+        }
+    
+    
+        .mensaje {
+            height: 200px;
+        }
+    
+        input::placeholder, textarea::placeholder {
+            opacity: 0.7;
+            color: #fff;
+        }
     }
 }
 
 @media (max-width: 1000px){
-    .contenedor{
-        padding: 40px 0;
+    .contenedor{    
+        padding: 40px 10%;
+        .titulo {
+            font-size: 55px;
+        }
+        form {
+            .submit-container {
+                text-align: right;
+                input[type=submit] {
+                    width: 60%;
+                }
+            }
+        }
     }
 }

@@ -1,13 +1,21 @@
 <div id="contacto" class="contenedor">
     <div class="titulo">CONTACTANOS</div>
-    <form #sendEmail = "ngForm" (ngSubmit) = "onClickSubmit(sendEmail.value)" >
-        <input type="text" name = "nombre" placeholder = "NOMBRE" ngModel>
-        <input type="text" name="apellido" placeholder="APELLIDO" ngModel>
-        <input type="text" name="asunto" placeholder="ASUNTO" ngModel>
-        <input type="text" name="email" placeholder="MAIL" ngModel>
+    <form #sendEmail="ngForm" (ngSubmit)="onClickSubmit(sendEmail)" novalidate>
+        <div class="row">
+            <div class="col-6">
+                <input type="text" name = "nombre" placeholder = "NOMBRE" ngModel required pattern="^[a-zA-z]+$">
+            </div>
+            <div class="col-6">
+                <input type="text" name="apellido" placeholder="APELLIDO" ngModel required  pattern="^[a-zA-z]+$" >
+            </div>
+        </div>
+        <input type="text" name="asunto" placeholder="ASUNTO" ngModel required>
+        <input type="text" name="email" placeholder="MAIL" ngModel required email>
 
-        <textarea type="text" name="mensaje" class="mensaje" placeholder="MENSAJE" ngModel></textarea>
+        <textarea type="text" name="mensaje" class="mensaje" placeholder="MENSAJE" ngModel required></textarea>
 
-        <input type = "submit" value = "ENVIAR MENSAJE">
+        <div class="submit-container">
+            <input type = "submit" value = "ENVIAR MENSAJE">
+        </div>
      </form>
 </div>

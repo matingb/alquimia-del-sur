@@ -14,13 +14,21 @@
         .equipo {
             padding: 35px;
             background-color: #f7f7f7;
-            height: 270px;
+            height: 285px;
             margin: 0 15px 50px;
-            transition: all 0.3s ease 0s;
+            transition: all 0.5s ease 0s;
             cursor: pointer;
+            overflow: hidden;
+            p {
+                line-height: 1.6;
+                text-align: left;
+                font-size: 20px;
+                color: #777;
+            }
         }
 
         .equipo:hover {
+            height: auto;
             color: #fff;
             background-color: #222;
         }
@@ -37,12 +45,6 @@
                 font-size: 25px;
                 font-weight: 700;
             }
-        }
-
-        p {
-            text-align: left;
-            font-size: 20px;
-            color: #777;
         }
 
         .equipo:hover p {

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/top-nav/top-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -11,7 +12,8 @@ import { Header2Component } from './components/header/header.component';
 import { IndexComponent } from './components/index/index.component';
 import { IndexViewComponent } from './components/index-view/index-view.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,11 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 6000 
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
