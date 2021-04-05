@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { IndexViewComponent } from "./components/index-view/index-view.component";
+import { IndexComponent } from "./components/index/index.component";
 
 const routes: Routes = [
-    { path: '', component: IndexViewComponent }
+    { path: '', component: IndexComponent }
   ];
 
 @NgModule({

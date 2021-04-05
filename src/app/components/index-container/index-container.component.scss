@@ -1,0 +1,133 @@
+.contenedor {
+    padding: 100px 0;
+    background-color: #fff;
+    text-align: center;
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 80px;
+    }
+
+    .equipos {
+        margin-bottom: 120px;
+        padding: 0 10%;
+        .equipo {
+            padding: 35px;
+            background-color: #f7f7f7;
+            height: 285px;
+            margin: 0 15px 50px;
+            transition: all 0.5s ease 0s;
+            cursor: pointer;
+            overflow: hidden;
+            p {
+                line-height: 1.6;
+                text-align: left;
+                font-size: 20px;
+                color: #777;
+            }
+        }
+
+        .equipo:hover {
+            height: auto;
+            color: #fff;
+            background-color: #222;
+        }
+
+        .titulo-equipo-container {
+            margin-bottom: 15px;
+            .icon {
+                margin-right: 15px;
+                font-size: 30px;
+            }
+            .titulo-equipo {
+                padding-top: 10px;
+                vertical-align: text-bottom;
+                font-size: 25px;
+                font-weight: 700;
+            }
+        }
+
+        .equipo:hover p {
+            color: #fff;
+        }
+    }
+
+    .productos-container {
+        padding-top: 50px;
+        align-items: center;
+        text-align: center;
+        background-color: #FBB040;
+        color: #fff;
+        margin-bottom: 120px;
+
+        i {
+            font-size: 80px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 35px;
+        }
+
+        div {
+            padding: 30px;
+    
+            i {
+                font-size: 80px;
+                margin-bottom: 30px;
+            }
+    
+            h2 {
+                font-size: 35px;
+            }
+        }
+        
+    }
+
+    .servicios {
+        padding: 0 8%;
+        .servicio {
+        padding: 40px;
+    
+            .icon-container {
+                text-align: right;
+                padding-top: 20px;
+                i {
+                    font-size: 90px;
+                    color: #FBB040;
+                }
+            }
+    
+            span {
+                font-size: 30px;
+            }
+            p {
+                font-size: 20px;
+                color: #818892;
+            }
+            .read-more {
+                color: #FBB040;
+                font-size: 15px;
+            }
+        }    
+    }
+}
+
+@media (max-width: 767px){
+   
+    .contenedor {
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .servicios {
+            .servicio {
+                .icon-container {
+                    text-align: left;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

@@ -9,11 +9,12 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Header2Component } from './components/header/header.component';
+import { IndexContainerComponent } from './components/index-container/index-container.component';
 import { IndexComponent } from './components/index/index.component';
-import { IndexViewComponent } from './components/index-view/index-view.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { EquipoComponent } from './components/equipo/equipo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ToastrModule } from 'ngx-toastr';
     ContactoComponent,
     Header2Component,
     IndexComponent,
-    IndexViewComponent
+    IndexContainerComponent,
+    EquipoComponent
   ],
   imports: [
     BrowserModule,

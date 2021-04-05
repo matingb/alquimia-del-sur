@@ -28,8 +28,11 @@ export class ContactoComponent implements OnInit {
       this.httpClient.post<any>('https://garzangb.herokuapp.com/sendEmail', body)
       .subscribe(data => {
         this.toastr.success(data.message, 'Mail enviado correctamente');
-        window.alert(data.message);
-      });
+      },
+        error => {
+          this.toastr.error('Vuelva a intentar en unos minutos', 'Ocurrió un error');
+        }
+      );
     }
     else {
       this.toastr.error('Los campos no fueron completados correctamente', 'Error al enviar el mail');
