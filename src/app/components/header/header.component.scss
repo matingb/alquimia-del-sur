@@ -3,7 +3,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 1000px;
+    height:91vh;
+    min-height: 500px;
 }
 
 .titulo {
@@ -22,17 +23,17 @@
     }
         
     .principal {
-        font-size: 80px;
+        font-size: 70px;
     }   
 
     .secundario {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     img {
         padding: 5px 0 0;
-        height: 115px;
-        width: 140px;
+        height: 80px;
+        width: 100px;
         opacity: 0.6;
         margin-bottom: 15px;
     }
@@ -45,8 +46,8 @@
         .icon {
             text-decoration: none;
             color: #fff;
-            padding: 15px 20px 5px 20px;
-            font-size: 50px;
+            padding: 15px 12px 5px 12px;
+            font-size: 40px;
             border-radius: 100%;
         }
     }
@@ -54,35 +55,31 @@
     .eslogan {
         padding: 15px;
         text-align: center;
-        font-size: 25px;
+        font-size: 20px;
         font-family: perpetua;
         color: #fff;
     }
 
 }
 
-@media (max-width: 767px){
-    .background {
-        height: 800px;
-    }
-   
+@media (max-width: 767px){   
     .titulo {
         .principal {
             font-size: 55px;
         }
     
         .secundario {
-            font-size: 35px;
+            font-size: 30px;
         }
     
         .redes {
             .icon {
-                font-size: 45px;
+                font-size: 35px;
             }
         }
     
         .eslogan {
-            font-size: 25px;
+            font-size: 20px;
         }
     }
 }

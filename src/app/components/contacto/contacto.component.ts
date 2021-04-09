@@ -28,6 +28,7 @@ export class ContactoComponent implements OnInit {
       this.httpClient.post<any>('https://garzangb.herokuapp.com/sendEmail', body)
       .subscribe(data => {
         this.toastr.success(data.message, 'Mail enviado correctamente');
+        ngForm.reset();
       },
         error => {
           this.toastr.error('Vuelva a intentar en unos minutos', 'Ocurrió un error');

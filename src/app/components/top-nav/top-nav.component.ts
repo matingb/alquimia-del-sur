@@ -1,9 +1,22 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-top-nav',
   templateUrl: './top-nav.component.html',
-  styleUrls: ['./top-nav.component.scss']
+  styleUrls: ['./top-nav.component.scss'],
+  animations: [
+    trigger('openCloseAnimation', [
+      transition(':enter', [
+        style({ height: 0, overflow: 'hidden' }),
+        animate('0.3s', style({ height: '!' }))
+      ]),
+      transition(':leave', [
+        style({ height: '!', overflow: 'hidden' }),
+        animate('0.3s', style({ height: '0' }))
+      ])
+    ])
+  ]
 })
 export class HeaderComponent implements OnInit {
 

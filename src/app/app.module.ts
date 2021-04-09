@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { EquipoComponent } from './components/equipo/equipo.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductoComponent } from './components/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { EquipoComponent } from './components/equipo/equipo.component';
     Header2Component,
     IndexComponent,
     IndexContainerComponent,
-    EquipoComponent
+    EquipoComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +37,9 @@ import { EquipoComponent } from './components/equipo/equipo.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 6000 
+      timeOut: 7000 
     }),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

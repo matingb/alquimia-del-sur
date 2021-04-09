@@ -26,3 +26,5 @@ body {
     font-family: myriad;
     src: url(assets/fonts/Myriad-Pro/Myriad-Pro.ttf) format("ttf");
   }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

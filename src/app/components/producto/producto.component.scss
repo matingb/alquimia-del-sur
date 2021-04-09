@@ -1,0 +1,38 @@
+.producto {
+    margin: 50px 0 10px;
+    padding: 70px 10px;
+    height: auto;
+    min-height: 400px;
+    align-items: center;
+    background-color: #FBB040;
+    i {
+        color: #fff;
+        font-size: 90px;
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        color: #fff;
+        font-size: 30px;
+    }
+    
+    p {
+        text-align: left;
+        line-height: 1.5;
+        color: #fff;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 767px){
+    .producto {
+        padding-left: 30px;
+        padding-right: 30px;
+        h2 {
+            margin-bottom: 30px;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}

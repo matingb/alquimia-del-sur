@@ -1,13 +1,23 @@
 nav {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 16;
     width: 100%;
     display: flex;
     color: #fff;
     font-weight: 700;
     background-color: #222;
-    min-height: 100px;
+    min-height: 70px;
+       
+    i {
+        cursor: pointer;
+        display: none;
+        transition: all 0s;
+    }
+
+    i:active {
+        color: rgb(50, 203, 250);;
+    }
 
     ul {
         width: 100%;
@@ -17,17 +27,14 @@ nav {
         list-style: none;
         padding: 0;
         padding-right: 15px;
-        
-        i {
-            display: none;
-        }
        
         div {
             display: flex;
             justify-content: flex-end;
             width: 100%;
             .nav-item {
-                font-size: 20px;
+                outline: 0;
+                font-size: 17px;
                 padding: 5px 1%;
                 margin: 0 5px;
                 border-bottom: 0px;
@@ -44,16 +51,16 @@ nav {
 
 @media (max-width: 767px){
     nav {
+        display: block;
+        i {
+            display: block;
+            font-size: 25px;
+            padding: 25px 25px;
+        }
         ul {
             display: block;
             background-color: #222;
             padding: 0;
-
-            i {
-                display: block;
-                font-size: 30px;
-                padding: 35px 25px;
-            }
 
             div {
                 display: block;
