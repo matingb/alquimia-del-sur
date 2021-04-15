@@ -32,6 +32,12 @@
         }
     }
 
+    .marca {
+        padding: 0 30px;
+        max-width: 250px;
+        height: 150px;
+    }
+
     .servicios {
         padding: 0 8%;
         .servicio {
@@ -73,6 +79,10 @@
             }
         }
 
+        .marca {
+            height: 100px;
+        }
+
         .servicios {
             .servicio {
                 .icon-container {
@@ -83,3 +93,4 @@
         }
     }
 }
+

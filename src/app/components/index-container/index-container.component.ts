@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-index-container',
@@ -37,7 +38,7 @@ export class IndexContainerComponent implements OnInit {
       titulo: "PLANTAS PARA OSMOSIS INVERSA",
       descripcion: "En comparación con las tecnologías de filtración tradicionales que dependen de una pantalla o filtro para eliminar partículas, la ósmosis inversa (OI) es un proceso de separación impulsado por presión que emplea una membrana semipermeable y los principios de filtración de flujo cruzado."
     }
-  ]
+  ];
 
   public productos: any[] = [
     {
@@ -55,7 +56,32 @@ export class IndexContainerComponent implements OnInit {
       icon: "fas fa-oil-can",
       texto: "Alquimia del Sur comercializa productos para el petróleo como los inhibidores de corrosión, incrustación, de azufre, de parafinas, antifoam, surfactantes, bactericidas, reductores de fricción. Todos ellos tanto sólidos (en su variante microsólidos) como líquido."
     },
-  ]
+  ];
+
+  public customOptions: OwlOptions  = {
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 1000,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 4,
+        autoplayTimeout: 500,
+      },
+      740: {
+        items: 5
+      },
+      940: {
+        items: 7
+      }
+    }
+  }
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 

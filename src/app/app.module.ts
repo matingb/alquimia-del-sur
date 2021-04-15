@@ -17,6 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { EquipoComponent } from './components/equipo/equipo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductoComponent } from './components/producto/producto.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ProductoComponent } from './components/producto/producto.component';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CarouselModule,
     ToastrModule.forRoot({
       timeOut: 7000 
     }),
