@@ -68,17 +68,20 @@ export class IndexContainerComponent implements OnInit {
     dots: false,
     responsive: {
       0: {
-        items: 1
+        items: 2,
       },
       400: {
-        items: 4,
+        items: 3,
         autoplayTimeout: 500,
       },
       740: {
-        items: 5
+        items: 4
       },
       940: {
         items: 7
+      },
+      1150: {
+        items: 9
       }
     }
   }

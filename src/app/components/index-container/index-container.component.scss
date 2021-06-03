@@ -33,9 +33,10 @@
     }
 
     .marca {
+        filter: grayscale(1);
         padding: 0 30px;
-        max-width: 250px;
-        height: 150px;
+        max-width: 200px;
+        height: 100px;
     }
 
     .servicios {
@@ -77,10 +78,6 @@
             h3 {
                 padding: 0;
             }
-        }
-
-        .marca {
-            height: 100px;
         }
 
         .servicios {

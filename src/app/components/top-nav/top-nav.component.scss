@@ -10,9 +10,15 @@ nav {
     min-height: 70px;
        
     i {
+        float: right;
         cursor: pointer;
         display: none;
         transition: all 0s;
+    }
+
+    img {
+        padding: 10px;
+        height: 80px;
     }
 
     i:active {
@@ -56,6 +62,9 @@ nav {
             display: block;
             font-size: 25px;
             padding: 25px 25px;
+        }
+        img {
+            height: 75px;
         }
         ul {
             display: block;

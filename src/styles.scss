@@ -3,28 +3,5 @@ body {
     margin: 0;
 }
 
-@font-face {
-    font-family: papyrus;
-    src: url(assets/fonts/papyrus/PAPYRUS.eot) format("eot");
-    src: url(assets/fonts/papyrus/PAPYRUS.woff2) format("woff2"),
-    url(assets/fonts/papyrus/PAPYRUS.woff) format("woff"),
-    url(assets/fonts/papyrus/PAPYRUS.ttf) format("truetype"),
-    url(assets/fonts/papyrus/PAPYRUS.svg) format("svg");
-  }
-
-  
-@font-face {
-    font-family: perpetua;
-    src: url(assets/fonts/Perpetua-Titling-MT/Perpetua-Titling-MT.eot) format("eot");
-    src: url(assets/fonts/Perpetua-Titling-MT/Perpetua-Titling-MT.woff2) format("woff2"),
-    url(assets/fonts/Perpetua-Titling-MT/Perpetua-Titling-MT.woff) format("woff"),
-    url(assets/fonts/Perpetua-Titling-MT/Perpetua-Titling-MT.TTF) format("truetype"),
-    url(assets/fonts/Perpetua-Titling-MT/Perpetua-Titling-MT.svg) format("svg");
-  }
-
-@font-face {
-    font-family: myriad;
-    src: url(assets/fonts/Myriad-Pro/Myriad-Pro.ttf) format("ttf");
-  }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

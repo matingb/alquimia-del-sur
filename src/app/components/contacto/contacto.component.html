@@ -3,16 +3,16 @@
     <form #sendEmail="ngForm" (ngSubmit)="onClickSubmit(sendEmail)" novalidate>
         <div class="row">
             <div class="col-6">
-                <input type="text" name = "nombre" placeholder = "NOMBRE" ngModel required pattern="^[a-zA-z]+$">
+                <input type="text" name = "nombre" placeholder = "NOMBRE" ngModel required pattern="^[a-zA-z]+$" maxlength="40">
             </div>
             <div class="col-6">
-                <input type="text" name="apellido" placeholder="APELLIDO" ngModel required  pattern="^[a-zA-z]+$" >
+                <input type="text" name="apellido" placeholder="APELLIDO" ngModel required  pattern="^[a-zA-z]+$" maxlength="40">
             </div>
         </div>
-        <input type="text" name="asunto" placeholder="ASUNTO" ngModel required>
-        <input type="text" name="email" placeholder="MAIL" ngModel required email>
+        <input type="text" name="asunto" placeholder="ASUNTO" ngModel required maxlength="40">
+        <input type="text" name="email" placeholder="MAIL" ngModel required email maxlength="40">
 
-        <textarea type="text" name="mensaje" class="mensaje" placeholder="MENSAJE" ngModel required></textarea>
+        <textarea type="text" name="mensaje" class="mensaje" placeholder="MENSAJE" ngModel required maxlength="500"></textarea>
 
         <div class="submit-container">
             <input type = "submit" value = "ENVIAR MENSAJE">

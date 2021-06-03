@@ -1,9 +1,12 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { IndexComponent } from "./components/index/index.component";
+import { ProductosComponent } from "./components/productos/productos.component";
 
 const routes: Routes = [
-    { path: '', component: IndexComponent }
+    { path: '', component: IndexComponent },
+    { path: 'productos/agua', component: ProductosComponent },
+    { path: '**', redirectTo: '' }
   ];
 
 @NgModule({

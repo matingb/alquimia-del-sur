@@ -18,6 +18,14 @@ import { EquipoComponent } from './components/equipo/equipo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductoComponent } from './components/producto/producto.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ProductosComponent } from './components/productos/productos.component';
+import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  scrollYMarginOffset: 8,
+  minScrollbarLength: 40,
+  wheelPropagation: false
+};
 
 @NgModule({
   declarations: [
@@ -29,7 +37,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     IndexComponent,
     IndexContainerComponent,
     EquipoComponent,
-    ProductoComponent
+    ProductoComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +51,14 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
       timeOut: 7000 
     }),
     NgbModule,
+    PerfectScrollbarModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
