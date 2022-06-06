@@ -5,6 +5,8 @@
     min-height: 400px;
     align-items: center;
     background-color: #FBB040;
+    cursor: pointer;
+    transition: all 0.5s;
     i {
         color: #fff;
         font-size: 90px;
@@ -22,6 +24,10 @@
         color: #fff;
         font-size: 23px;
     }
+}
+
+.producto:hover {
+    opacity: 0.7;
 }
 
 @media (max-width: 767px){

@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/top-nav/top-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -16,10 +15,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { EquipoComponent } from './components/equipo/equipo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProductoComponent } from './components/producto/producto.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { ProductosComponent } from './components/productos/productos.component';
+import { AguaComponent } from './components/productos/agua/agua.component';
 import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { ProductoComponent } from './components/producto/producto.component';
+import { DetalleProductoComponent } from './components/productos/detalle-producto/detalle-producto.component';
+import { AgradecimientoComponent } from './components/agradecimiento/agradecimiento.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   scrollYMarginOffset: 8,
@@ -38,7 +39,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     IndexContainerComponent,
     EquipoComponent,
     ProductoComponent,
-    ProductosComponent
+    AguaComponent,
+    DetalleProductoComponent,
+    AgradecimientoComponent,
   ],
   imports: [
     BrowserModule,

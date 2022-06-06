@@ -1,11 +1,13 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AgradecimientoComponent } from "./components/agradecimiento/agradecimiento.component";
 import { IndexComponent } from "./components/index/index.component";
-import { ProductosComponent } from "./components/productos/productos.component";
+import { AguaComponent } from "./components/productos/agua/agua.component";
 
 const routes: Routes = [
     { path: '', component: IndexComponent },
-    { path: 'productos/agua', component: ProductosComponent },
+    { path: 'productos/AGUA', component: AguaComponent },
+    { path: 'agradecimiento', component: AgradecimientoComponent },
     { path: '**', redirectTo: '' }
   ];
 

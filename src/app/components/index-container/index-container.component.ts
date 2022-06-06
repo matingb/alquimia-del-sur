@@ -11,11 +11,11 @@ export class IndexContainerComponent implements OnInit {
 
   public equipos: any[] = [
     {
-      titulo: "TRATAMIENTOS DE EFLUENTES",
+      titulo: "TRATAMIENTO DE EFLUENTES",
       descripcion: "Nuestra especialidad es el tratamiento integral de efluentes industriales para pequeñas, medianas o industrias. Por esta razón, consúltenos antes de Invertir en el tratamiento de este tipo de efluentes."
     },
     {
-      titulo: "PLANTAS POTABILIZADORAS",
+      titulo: "POTABILIZACIÓN",
       descripcion: "Permiten someter el agua a distintos procesos para que pueda ser consumida por el ser humano sin que presente un riesgo para su salud. Implica, por tanto, el tratamiento de aguas superficiales o subterráneas para obtener agua potable con calidad conforme a lo establecido en el código del estado en el cual se establece la planta, que establece los criterios sanitarios de la calidad del agua de consumo humano."
     },
     {
@@ -23,7 +23,7 @@ export class IndexContainerComponent implements OnInit {
       descripcion: "Nuestra especialidad es el tratamiento integral de efluentes cloacales para pequeñas, medianas o grandes comunidades, barrios privados, emprendimientos hoteleros o cabañas, etc. Por esta razón, consúltenos antes de Invertir en el tratamiento de este tipo de efluentes."
     },
     {
-      titulo: "EQUIPOS PARA ENERGÍA FOTOVOLTÁICA",
+      titulo: "EQUIPOS PARA ENERGÍA FOTOVOLTAICA",
       descripcion: "Estación de carga de vehículos eléctricos nivel 2 universal preparada para cargar dos vehículos simultáneamente. Compatible con todos los vehículos tipo plug-in. Viene equipada con un sistema abierto de procesamiento de pagos sin efectivo."
     },
     {
@@ -37,7 +37,15 @@ export class IndexContainerComponent implements OnInit {
     {
       titulo: "PLANTAS PARA OSMOSIS INVERSA",
       descripcion: "En comparación con las tecnologías de filtración tradicionales que dependen de una pantalla o filtro para eliminar partículas, la ósmosis inversa (OI) es un proceso de separación impulsado por presión que emplea una membrana semipermeable y los principios de filtración de flujo cruzado."
-    }
+    },
+    {
+      titulo: "CABINAS SANITIZANTES",
+      descripcion: "Sistema a través del cual tanto las personas como los objetos que llevan consigo son descontaminados antes de ingresar a algún lugar de concurrencia. Tiene la finalidad de reducir la carga de virus tan actuales y de difusión mundial en la superficie de vestimenta, cuerpo y objetos."
+    },
+    {
+      titulo: "CONTROL DE DERRAMES DE HIDROCARBUROS",
+      descripcion: "Alquimia del Sur es representante de Aqua – Guard empresa Canadiense ubicada en la ciudad de Vancouver con más de 50 años de trayectoria en el control de derrames, siendo una de las tres lideres mundiales con experiencia en este rubro. AQUA-GUARD ofrece una extensa gama de soluciones integrales 100% a la medida para el combate de derrames pretroleros y temas relacionados."
+    },
   ];
 
   public productos: any[] = [
@@ -58,6 +66,28 @@ export class IndexContainerComponent implements OnInit {
     },
   ];
 
+  public customEquipoOptions: OwlOptions  = {
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1,
+        autoplayTimeout: 1500,
+      },
+      600: {
+        items: 2,
+      },
+      1080: {
+        items: 3,
+      }
+    }
+  }
+
   public customOptions: OwlOptions  = {
     loop: true,
     autoplay: true,
@@ -69,19 +99,26 @@ export class IndexContainerComponent implements OnInit {
     responsive: {
       0: {
         items: 2,
+        autoplayTimeout: 500,
       },
-      400: {
+      300: {
         items: 3,
         autoplayTimeout: 500,
       },
-      740: {
+      640: {
         items: 4
       },
+      820: {
+        items: 5
+      },
       940: {
+        items: 6
+      },
+      1080: {
         items: 7
       },
-      1150: {
-        items: 9
+      1220: {
+        items: 8
       }
     }
   }

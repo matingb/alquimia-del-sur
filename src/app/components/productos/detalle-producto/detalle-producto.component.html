@@ -1,0 +1,15 @@
+<div class="detalle">
+    <div style="display: flex; align-items: center;">
+        <div class="producto">{{ nombre }}</div>
+        <i *ngIf=!isOpen (click)="openClose()" class="fas fa-chevron-down arrow"></i>
+        <i *ngIf=isOpen (click)="openClose()" class="fas fa-chevron-up arrow"></i>
+    </div>
+
+    <div *ngIf="isOpen">
+        <div><span class="negrita">Aplicaciones: </span></div>
+        <div style="padding: 5px 0px 5px 20px;">{{ aplicacion }}</div>
+        <div><span class="negrita">Presentación: </span></div>
+        <div style="padding: 5px 0px 5px 20px;">{{ presentacion }}</div>
+    </div>
+
+</div>

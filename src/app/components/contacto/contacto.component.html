@@ -9,8 +9,10 @@
                 <input type="text" name="apellido" placeholder="APELLIDO" ngModel required  pattern="^[a-zA-z]+$" maxlength="40">
             </div>
         </div>
-        <input type="text" name="asunto" placeholder="ASUNTO" ngModel required maxlength="40">
         <input type="text" name="email" placeholder="MAIL" ngModel required email maxlength="40">
+        <input type="text" name="numero" placeholder="NÚMERO" ngModel required pattern="[- +()0-9]+" maxlength="40">
+        <input type="text" name="asunto" placeholder="ASUNTO" ngModel required maxlength="40">
+        
 
         <textarea type="text" name="mensaje" class="mensaje" placeholder="MENSAJE" ngModel required maxlength="500"></textarea>
 

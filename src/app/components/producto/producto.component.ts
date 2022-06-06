@@ -17,7 +17,7 @@ export class ProductoComponent implements OnInit {
   public texto: string;
 
   @Input()
-  public textAling: string;
+  public textAling: string = "center";
 
   constructor() { }
 
