@@ -1,10 +1,7 @@
-<div class="row producto" [routerLink]="['/productos', titulo]">
-    <div class="col-md-3 col-sm-12" style="align-self: center;">
-        <i [class]=icon></i>
-        <h2>{{ titulo }}</h2>
+<div class="producto" [routerLink]="['/productos', titulo]">
+    <div class="titulo-producto-container">
+        <span class="titulo-producto">{{ titulo }}</span>
     </div>
-    <div class="col-md-9 col-sm-12" [style.text-aling]="textAling">
-        <p>{{ texto }}</p>
-        <p style="font-style: italic;">Ver más</p>
-    </div>
+    <p>{{ texto }}</p>
+    <p style="font-style: italic;">Ver más</p>
 </div>

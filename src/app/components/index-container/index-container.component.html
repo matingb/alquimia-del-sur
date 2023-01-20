@@ -2,23 +2,15 @@
 
     <div id="productos" class="productos-container">
         <h1>PRODUCTOS</h1>
-        <h3>Alquimia del Sur comercializa gran variedad de productos que estan orientados tanto al agua y el petróleo como a la alimentación y cosmética</h3>
-        
-        <ngb-carousel #carousel 
-        [interval]="5000" 
-        [pauseOnHover]=true 
-        [pauseOnFocus]=true 
-        [showNavigationArrows]=false
-        style="outline: 0;">
-            <ng-template ngbSlide *ngFor="let producto of productos">
-                <app-producto
-                [icon]=producto.icon
-                [titulo]=producto.titulo
-                [texto]=producto.texto
-                ></app-producto>
-            </ng-template>
-        </ngb-carousel>
-           
+        <h3>Alquimia del Sur comercializa gran variedad de productos que estan orientados tanto al agua y el petróleo como a la alimentación y cosmética</h3>        
+        <div class="row productos">
+            <app-producto *ngFor="let producto of productos"
+            class="col-xl-4 col-lg-6 col-md-12"
+            [icon]=producto.icon
+            [titulo]=producto.titulo
+            [texto]=producto.texto
+            ></app-producto>
+        </div>          
     </div>
 
     <div id="equipos" class="equipos">
