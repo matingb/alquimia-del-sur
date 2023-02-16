@@ -5,3 +5,7 @@ body {
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.toast-container .ngx-toastr {
+ width: 360px !important;
+}

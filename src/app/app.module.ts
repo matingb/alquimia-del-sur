@@ -51,7 +51,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     CarouselModule,
     ToastrModule.forRoot({
-      timeOut: 7000 
+      timeOut: 7000,
+      closeButton: true
     }),
     NgbModule,
     PerfectScrollbarModule,
