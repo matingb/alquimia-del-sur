@@ -26,7 +26,7 @@ export class ContactoComponent implements OnInit {
         mensaje: ngForm.value.mensaje,
         numero: ngForm.value.numero
       };
-      this.httpClient.post<any>('https://garzangb.herokuapp.com/sendEmail', body)
+      this.httpClient.post<any>('https://email-sender-v3f4.onrender.com/sendEmail', body)
       .subscribe(data => {
         this.router.navigate(['/agradecimiento']);
         //this.toastr.success("data.message", 'Mail enviado correctamente');
