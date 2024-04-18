@@ -1,0 +1,123 @@
+.titulo {
+    padding: 23px 0 18px 25px;
+    font-size: 25px;
+    color: #01759b;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 1px 4px 0 rgb(2 79 104 /24%);
+
+    h1 { 
+        font-size: 25px
+    }
+}
+
+.contenedor {
+    min-height: 500px;
+    display: flex;
+    padding: 0;
+    aside {
+        height: calc(100% - 247px);
+        min-height: 500px;
+        min-width: 30px;
+        z-index: 1;
+        position: absolute;
+        box-shadow: 1px 2px 4px 0px rgb(2 79 104 /24%);
+        background-color: #f5f5f8;
+        nav {
+            position: sticky;
+            height: 100%;
+            width: 370px;
+            padding: 0;
+            background-color: #fff;
+            ul {
+                padding: 0;
+                padding-top: 20px;
+                list-style: none;        
+                li {
+                    padding: 12px;
+                    display: flex;
+                    align-items: center;
+                    height: 55px;
+                    font-size: 16px;
+                    border-bottom: solid 1px #f5f5f8;
+                    color:  #757578;
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    overflow: hidden;
+                    white-space:nowrap
+                }
+                li:hover {
+                    background-color: rgba(241, 243, 244, 1);
+                }
+                li.active {
+                    background-color: #01759b;
+                    color: #fff;
+                }
+            }
+        }
+        .arrow-container {
+            width: 30px;
+            .arrow {
+                z-index: 1;
+                position: absolute;
+                top: 30px;
+                right: -3%;
+                color: rgb(2 79 104 /70%);
+                border: solid 2px rgb(2 79 104 /24%);
+                border-radius: 60px;
+                background-color: #fff;
+                text-align: center;
+                width: 22px;
+                height: 21px;
+                font-size: 17px;
+            }
+            .arrow:hover {
+                color: #fff;
+                background-color: rgb(2 79 104 /70%);
+            }
+            .fa-chevron-left {
+                padding-right: 3px;
+            }
+            .fa-chevron-right {
+                padding-left: 3px;
+                right: -11.5px;
+            }
+        }
+    }
+
+
+    
+    .informacion {
+        width: 100%;
+        min-height: 74.7vh;
+        padding: 20px 30px 20px 60px;
+        background-color: #f5f5f8;
+        color: #37373a;
+        .categoria {
+            font-family: Roboto, sans-serif;
+            line-height: 50px;
+            font-size: 24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .producto {
+            margin: 20px 0 15px;
+            font-size: 20px; 
+            width: fit-content;
+            min-width: 70px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.negrita {
+    font-weight: 700;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
