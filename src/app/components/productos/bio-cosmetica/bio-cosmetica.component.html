@@ -1,0 +1,43 @@
+<div class="titulo">
+    <i class="fa fa-leaf" style="padding-right: 5px;"></i>
+    <h1 style="text-align: center;">NUESTROS PRODUCTOS PARA LA BIO COSMÉTICA NATURAL</h1>
+</div>
+<div class="contenedor">
+    <aside>
+        <nav [@navInOut] *ngIf="hideNav">
+            <ul>
+                <li (click)="mostrarProductos(hidrolatoDeLavanda)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Lavanda (Lavandula angustifolia)'}">Hidrolato De Lavanda</li>
+                <li (click)="mostrarProductos(hidrolatoDeMenta)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Menta (Mentha piperita L.)'}">Hidrolato De Menta</li>
+                <li (click)="mostrarProductos(hidrolatoDeTanaceto)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Tanaceto (Tanacetum Vulgare)'}">Hidrolato De Tanaceto</li>
+                <li (click)="mostrarProductos(hidrolatoDeEnebro)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Enebro'}">Hidrolato De Enebro</li>
+            </ul>
+        </nav>
+        <div class="arrow-container" (click)="toggleNav()" >
+            <i *ngIf="hideNav" class="fas fa-chevron-left arrow"></i>
+            <i *ngIf="!hideNav" class="fas fa-chevron-right arrow"></i>
+        </div>
+    </aside>
+    
+    <div class="informacion" *ngIf=categoriaSeleccionada [@slideInOut]="categoryChange">
+        <div class="categoria negrita">{{ categoriaSeleccionada.nombre }}</div>
+        <div class="detalle" *ngIf=categoriaSeleccionada.descripcion>
+            <div style="padding-top: 10px; padding-bottom: 10px; white-space: pre-line;">{{ categoriaSeleccionada.descripcion }}</div>
+            <div *ngIf=categoriaSeleccionada.presentacion>
+                <div><span class="negrita">Presentación: </span></div>
+                <div style="padding: 5px 0px 5px 20px; white-space: pre-line;">{{ categoriaSeleccionada.presentacion }}</div>
+            </div>
+            <div *ngIf=categoriaSeleccionada.cantidad>
+                <div><span class="negrita">Cantidad: </span></div>
+                <div style="padding: 5px 0px 5px 20px;">{{ categoriaSeleccionada.cantidad }}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="informacion flex-center" *ngIf=!categoriaSeleccionada>
+        <div style="text-align: center;">
+            <img src="assets/imagenes/select-product.png" alt="" style="width: 150px; height: 180px; opacity: 0.5;" >
+            <div class="negrita" style="text-align: center; font-size: 20px; opacity: 0.5;">Seleccione alguna categoría</div>
+        </div>
+    </div>
+</div>

@@ -14,6 +14,9 @@ export class ProductoComponent implements OnInit {
   public titulo: string;
 
   @Input()
+  public link: string;
+
+  @Input()
   public texto: string;
 
   @Input()

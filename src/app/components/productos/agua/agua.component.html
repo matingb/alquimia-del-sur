@@ -57,7 +57,7 @@
 
         </div>
         <div class="detalle" *ngIf=categoriaSeleccionada.descripcion>
-            <div style="padding-top: 10px; padding-bottom: 10px;">{{ categoriaSeleccionada.descripcion }}</div>
+            <div style="padding-top: 10px; padding-bottom: 10px; white-space: pre-line;">{{ categoriaSeleccionada.descripcion }}</div>
             <div *ngFor="let lista of categoriaSeleccionada.lista">
                 <div style="padding: 5px 0px 5px 20px;">{{ lista }}</div>
             </div>

@@ -21,6 +21,7 @@ import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLL
 import { ProductoComponent } from './components/producto/producto.component';
 import { DetalleProductoComponent } from './components/productos/detalle-producto/detalle-producto.component';
 import { AgradecimientoComponent } from './components/agradecimiento/agradecimiento.component';
+import { BioCosmeticaComponent } from './components/productos/bio-cosmetica/bio-cosmetica.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   scrollYMarginOffset: 8,
@@ -40,6 +41,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     EquipoComponent,
     ProductoComponent,
     AguaComponent,
+    BioCosmeticaComponent,
     DetalleProductoComponent,
     AgradecimientoComponent,
   ],

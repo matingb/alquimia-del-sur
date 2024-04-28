@@ -51,16 +51,19 @@ export class IndexContainerComponent implements OnInit {
   public productos: any[] = [
     {
       titulo: "AGUA",
+      link: "agua",
       icon: "fas fa-tint",
       texto: "Alquimia del Sur ofrece una amplia variedad de productos para el tratado y cuidado del agua. Para más información no dude en contactarse con nosotros."
     },
     {
-      titulo: "ALIMENTACIÓN Y COSMÉTICA",
+      titulo: "BIO COSMÉTICA NATURAL",
+      link: "bio-cosmetica",
       icon: "fas fa-utensils",
       texto: "Dentro de nuestros productos orientados a la alimentación y la cosmética se encuentran: aceites esenciales, vinagre de manzana orgánico y citrato de magnesio."
     },
     {
       titulo: "PETRÓLEO",
+      link: "petroleo",
       icon: "fas fa-oil-can",
       texto: "Alquimia del Sur comercializa productos para el petróleo como los inhibidores de corrosión, incrustación, de azufre, de parafinas, antifoam, surfactantes, bactericidas, reductores de fricción. Todos ellos tanto sólidos (en su variante microsólidos) como líquido."
     },
