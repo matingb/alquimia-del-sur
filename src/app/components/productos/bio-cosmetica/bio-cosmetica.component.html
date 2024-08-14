@@ -10,6 +10,8 @@
                 <li (click)="mostrarProductos(hidrolatoDeMenta)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Menta (Mentha piperita L.)'}">Hidrolato De Menta</li>
                 <li (click)="mostrarProductos(hidrolatoDeTanaceto)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Tanaceto (Tanacetum Vulgare)'}">Hidrolato De Tanaceto</li>
                 <li (click)="mostrarProductos(hidrolatoDeEnebro)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Enebro'}">Hidrolato De Enebro</li>
+                <li (click)="mostrarProductos(hidrolatoDeOregano)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Orégano'}">Hidrolato De Orégano</li>
+                <li (click)="mostrarProductos(hidrolatoDePino)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Pino'}">Hidrolato De Pino</li>
             </ul>
         </nav>
         <div class="arrow-container" (click)="toggleNav()" >
@@ -21,7 +23,7 @@
     <div class="informacion" *ngIf=categoriaSeleccionada [@slideInOut]="categoryChange">
         <div class="categoria negrita">{{ categoriaSeleccionada.nombre }}</div>
         <div class="detalle" *ngIf=categoriaSeleccionada.descripcion>
-            <div style="padding-top: 10px; padding-bottom: 10px; white-space: pre-line;">{{ categoriaSeleccionada.descripcion }}</div>
+            <div class="descripcion" [innerHTML]="categoriaSeleccionada.descripcion"></div>
             <div *ngIf=categoriaSeleccionada.presentacion>
                 <div><span class="negrita">Presentación: </span></div>
                 <div style="padding: 5px 0px 5px 20px; white-space: pre-line;">{{ categoriaSeleccionada.presentacion }}</div>

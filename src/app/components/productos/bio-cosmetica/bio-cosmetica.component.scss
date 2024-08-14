@@ -95,6 +95,7 @@
         padding: 20px 30px 20px 60px;
         background-color: #f5f5f8;
         color: #37373a;
+        
         .categoria {
             font-family: Roboto, sans-serif;
             line-height: 50px;
@@ -102,6 +103,15 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        .detalle {
+            .descripcion {
+                padding-top: 10px; 
+                padding-bottom: 10px; 
+                white-space: pre-line;
+            }
+        }
+
         .producto {
             margin: 20px 0 15px;
             font-size: 20px; 

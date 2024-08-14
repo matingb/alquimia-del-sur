@@ -418,6 +418,7 @@ public tratamientoDeGeneracionDeVaporCaldera = {
   mostrarProductos(categoria: any) {
     this.categoriaSeleccionada = categoria;
     this.categoryChange = this.categoryChange === true ? false : true;
+    this.toggleNav();
   }
 
   toggleNav() {
