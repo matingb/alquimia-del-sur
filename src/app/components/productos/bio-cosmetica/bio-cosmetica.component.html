@@ -2,23 +2,48 @@
     <i class="fa fa-leaf" style="padding-right: 5px;"></i>
     <h1 style="text-align: center;">NUESTROS PRODUCTOS PARA LA BIO COSMÉTICA NATURAL</h1>
 </div>
+
+<div (click)="toggleNav()" class="algo">
+    <h1 class="menu-toggle">Categorías</h1>
+    <i class="fa fa-bars" style="padding-right: 5px;"></i>
+</div>
+
 <div class="contenedor">
-    <aside>
-        <nav [@navInOut] *ngIf="hideNav">
-            <ul>
-                <li (click)="mostrarProductos(hidrolatoDeLavanda)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Lavanda (Lavandula angustifolia)'}">Hidrolato De Lavanda</li>
-                <li (click)="mostrarProductos(hidrolatoDeMenta)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Menta (Mentha piperita L.)'}">Hidrolato De Menta</li>
-                <li (click)="mostrarProductos(hidrolatoDeTanaceto)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Tanaceto (Tanacetum Vulgare)'}">Hidrolato De Tanaceto</li>
-                <li (click)="mostrarProductos(hidrolatoDeEnebro)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Enebro'}">Hidrolato De Enebro</li>
-                <li (click)="mostrarProductos(hidrolatoDeOregano)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Orégano'}">Hidrolato De Orégano</li>
-                <li (click)="mostrarProductos(hidrolatoDePino)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Hidrolato de Pino'}">Hidrolato De Pino</li>
+    <nav [@navInOut] *ngIf="hideNav">
+        <ul class="categorias">
+          <li>
+            <div class="grupo" (click)="toggleGrupo('hidrolatos')">
+              Hidrolatos
+              <i [class]="gruposVisibles['hidrolatos'] ? 'fa fa-arrow-up' : 'fa fa-arrow-down'"></i>
+            </div>
+            <ul *ngIf="gruposVisibles['hidrolatos']">
+              <li 
+                *ngFor="let producto of hidrolatos" 
+                (click)="mostrarProductos(producto)" 
+                class="sub-item"
+                [ngClass]="{'active': categoriaSeleccionada?.nombre === producto.nombre}">
+                {{ producto.nombre }}
+              </li>
             </ul>
-        </nav>
-        <div class="arrow-container" (click)="toggleNav()" >
-            <i *ngIf="hideNav" class="fas fa-chevron-left arrow"></i>
-            <i *ngIf="!hideNav" class="fas fa-chevron-right arrow"></i>
-        </div>
-    </aside>
+          </li>
+      
+          <li>
+            <div class="grupo" (click)="toggleGrupo('aceites')">
+              Aceites Esenciales
+              <i [class]="gruposVisibles['aceites'] ? 'fa fa-arrow-up' : 'fa fa-arrow-down'"></i>
+            </div>
+            <ul *ngIf="gruposVisibles['aceites']">
+              <li 
+                *ngFor="let producto of aceites" 
+                (click)="mostrarProductos(producto)" 
+                class="sub-item"
+                [ngClass]="{'active': categoriaSeleccionada?.nombre === producto.nombre}">
+                {{ producto.nombre }}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     
     <div class="informacion" *ngIf=categoriaSeleccionada [@slideInOut]="categoryChange">
         <div class="categoria negrita">{{ categoriaSeleccionada.nombre }}</div>
