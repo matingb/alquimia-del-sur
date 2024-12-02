@@ -2,25 +2,24 @@
     <i class="fas fa-tint" style="padding-right: 5px;"></i>
     <h1 style="text-align: center;">NUESTROS PRODUCTOS PARA EL AGUA</h1>
 </div>
+
+<div (click)="toggleNav()" class="algo">
+    <h1 class="menu-toggle">Categorías</h1>
+    <i class="fa fa-bars" style="padding-right: 5px;"></i>
+</div>
+
 <div class="contenedor">
-    <aside>
-        <nav [@navInOut] *ngIf="hideNav">
-            <ul>
-                <li (click)="mostrarProductos(mineria)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Mineria'}">Mineria</li>
-                <li (click)="mostrarProductos(osmosisInversa)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Osmosis Inversa y Resinas de Intercambio Iónico'}">Osmosis Inversa y Resinas de Intercambio Iónico</li>
-                <li (click)="mostrarProductos(petroleoPetroquimica)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Petróleo y Petroquímica'}">Petróleo y Petroquímica</li>
-                <li (click)="mostrarProductos(piscinas)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Piscinas'}">Piscinas</li>
-                <li (click)="mostrarProductos(potabilizacion)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Potabilización'}">Potabilización</li>
-                <li (click)="mostrarProductos(torresDeEnfrimiento)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Torres de Enfriamiento'}">Torres de Enfriamiento</li>
-                <li (click)="mostrarProductos(tratamientoDeEfluentes)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Tratamiento de Efluentes'}">Tratamiento De Efluentes</li>
-                <li (click)="mostrarProductos(tratamientoDeGeneracionDeVaporCaldera)" [ngClass]="{'active': categoriaSeleccionada?.nombre === 'Tratamiento de generación de vapor – caldera'}">Tratamiento de generación de vapor – caldera</li>
-            </ul>
-        </nav>
-        <div class="arrow-container" (click)="toggleNav()" >
-            <i *ngIf="hideNav" class="fas fa-chevron-left arrow"></i>
-            <i *ngIf="!hideNav" class="fas fa-chevron-right arrow"></i>
-        </div>
-    </aside>
+    <nav [@navInOut] *ngIf="hideNav">
+        <ul class="categorias">
+            <li 
+            *ngFor="let categoria of categorias" 
+            (click)="mostrarProductos(categoria)" 
+            class="sub-item"
+            [ngClass]="{'active': categoriaSeleccionada?.nombre === categoria.nombre}">
+            {{ categoria.nombre }}
+            </li>
+        </ul>
+    </nav>
     <div class="informacion" *ngIf=categoriaSeleccionada [@slideInOut]="categoryChange">
         <div class="categoria negrita">{{ categoriaSeleccionada.nombre }}</div>
         <div *ngFor="let grupo of categoriaSeleccionada.grupos">

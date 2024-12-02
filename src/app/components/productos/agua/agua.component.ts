@@ -415,6 +415,16 @@ public tratamientoDeGeneracionDeVaporCaldera = {
   ]
 };
 
+categorias = [
+  this.mineria,
+  this.osmosisInversa,
+  this.petroleoPetroquimica,
+  this.piscinas,
+  this.potabilizacion,
+  this.torresDeEnfrimiento,
+  this.tratamientoDeGeneracionDeVaporCaldera
+];
+
   mostrarProductos(categoria: any) {
     this.categoriaSeleccionada = categoria;
     this.categoryChange = this.categoryChange === true ? false : true;
